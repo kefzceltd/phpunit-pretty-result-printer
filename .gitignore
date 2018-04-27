@@ -3,9 +3,11 @@ composer.lock
 .DS_Store
 .idea/*
 .idea/
+.history/
 NOTES.md
-.history/*
 .vscode/*
 tickets/*
 .phpunit-watcher.yml
 .history/*
+coverage/
+.php_cs.cache

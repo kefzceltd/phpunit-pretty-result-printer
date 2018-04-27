@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit backupGLobals="false"
-         beStrictAboutOutputDuringTests="true"
+<phpunit beStrictAboutOutputDuringTests="false"
          bootstrap="vendor/autoload.php"
          colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
-         failOnRisky="true"
+         failOnRisky="false"
          processIsolation="false"
          printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
          stopOnError="false"
@@ -14,11 +13,16 @@
          verbose="true"
 >
     <testsuites>
-        <testsuite name="Unit Tests">
-            <directory>tests</directory>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
         </testsuite>
         <testsuite name="Tickets">
             <directory>tickets</directory>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
 </phpunit>
